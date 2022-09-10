@@ -1,4 +1,4 @@
-package com.altanexercise.producer;
+package com.altanexercise.consumer.amqp;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;

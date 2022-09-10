@@ -1,4 +1,4 @@
-package com.altanexercise.consumer;
+package com.altanexercise.producer.amqp;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -11,4 +11,5 @@ public class QueueConsumer {
     public void receive(@Payload String fileBody) {
         System.out.println("Message: " + fileBody);
     }
+
 }
