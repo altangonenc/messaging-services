@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Configuration;
 public class SenderConfig {
 
     @Value("${producer.queue.name}")
-    private String message;
+    private String sendingLocation;
 
     @Bean
     public Queue queue() {
-        return new Queue(message, true);
+        return new Queue(sendingLocation, true);
     }
 }

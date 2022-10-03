@@ -11,17 +11,17 @@ import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "user_table")
+@Table(name = "user_order_table")
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserOrder {
     @Id
     @GeneratedValue
     private int id;
 
-    private String name;
+    private String userName;
 
-    private String email;
+    private String status;
 
-    private String country;
+    private String failureReason;
 }
