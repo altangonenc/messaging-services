@@ -18,6 +18,7 @@ public class RabbitMQConfig {
     DirectExchange directExchange() {
         return new DirectExchange("producer-direct-exchange");
     }
+
     @Bean
     FanoutExchange fanoutExchange() {
         return new FanoutExchange("producer-fanout-exchange");

@@ -1,6 +1,6 @@
 package com.altanexercise.consumer.amqp;
 
-import com.altanexercise.consumer.entity.User;
+import com.altanexercise.consumer.dto.UserDtoAmqp;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -14,7 +14,7 @@ public class QueueConsumer {
     Logger logger = (Logger) LoggerFactory.getLogger(QueueConsumer.class);
 
     @RabbitListener(queues = {"${queue.name}"})
-    public void receive(@Payload User user) {
+    public void receive(@Payload UserDtoAmqp user) {
         logger.info("incoming message: "+ user);
     }
 }
